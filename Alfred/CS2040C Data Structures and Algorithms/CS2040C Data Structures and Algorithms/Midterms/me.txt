@@ -1,0 +1,55 @@
+###CS2040C MIDTERM QUIZ AY2021S1###
+
+###INLINE ANSWERS###
+
+#Student Num:
+#NUSNET ID:
+#Q0:
+
+#Q1a:1024
+#Q1b:"\n"
+#Q1c:3.4000000
+#Q1d:"0024CCShiisst"
+#Q1e:7
+
+#Q2a: O(n log2(n))
+#Q2b: O(1)
+#Q2c: O(n)
+#Q2d: O(m^2)
+#Q2e: O(l log2(l))
+
+#Q3a: 2187 (3^7 since the initial number in each position (index 1 based) can only be within +-1 of their respective 1 based index)
+#Q3b: 46656 (6^6 since the last number in index 7 (1 based indexing) has to be 1)
+#Q3c: yes, correct algorithmically. I will use because mergesort is stable sort and is in nlogn time complexity, however, it has a high space complexity
+#Q3d: mergesort, 
+
+#Q4a:
+#Q4b:
+#Q4c:
+#Q4d:
+#Q4e:
+
+#Q5a:
+#Q5b:
+
+###END OF INLINE ANSWERS###
+
+###MULTILINE ANSWERS###
+
+##Q6a START##
+[Line limit : 15]
+replace this with your answer for Q6a
+replace this with your answer for Q6a
+replace this with your answer for Q6a
+##Q6a END##
+
+##Q7a START##
+[Line limit : 25]
+replace this with your answer for Q7a
+replace this with your answer for Q7a
+replace this with your answer for Q7a
+##Q7a END##
+
+###END OF MULTILINE ANSWERS###
+
+###END OF CS2040C MIDTERM QUIZ###

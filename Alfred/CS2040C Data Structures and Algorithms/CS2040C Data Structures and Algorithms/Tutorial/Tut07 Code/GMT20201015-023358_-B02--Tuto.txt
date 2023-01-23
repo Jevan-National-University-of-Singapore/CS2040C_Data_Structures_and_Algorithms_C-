@@ -1,0 +1,35 @@
+00:06:31	A0217143N PEH ZHENHAO, AMOS:	7
+00:07:13	A0217143N PEH ZHENHAO, AMOS:	1
+00:11:08	A0199205Y Jonathan Khoo Teng Yang:	so complete just means all the leaves are filled up?
+00:11:43	A0199205Y Jonathan Khoo Teng Yang:	oh
+00:12:02	A0217143N PEH ZHENHAO, AMOS:	max is 31min is log(31)
+00:12:15	[PC] A0201600H Zhong Shuhao:	5
+00:13:07	A0217143N PEH ZHENHAO, AMOS:	so we don't count the root node?
+00:13:29	A0217143N PEH ZHENHAO, AMOS:	oh ok
+00:13:30	Pang Jun Wen, Adric:	so levels and height is different
+00:13:52	Pang Jun Wen, Adric:	ok
+00:19:19	Philemon Heng:	-20457811121315171819
+00:28:18	A0199205Y Jonathan Khoo Teng Yang:	if a qns gives us a fully skewed tree, (Skewed to right), can we say complexity of successor is o(1)?
+00:28:25	A0199205Y Jonathan Khoo Teng Yang:	or isit still logn
+00:28:27	A0199205Y Jonathan Khoo Teng Yang:	?
+00:28:48	A0199205Y Jonathan Khoo Teng Yang:	cos its just the next vertex right?
+00:29:25	A0199205Y Jonathan Khoo Teng Yang:	ok thxz
+00:29:38	Jonathan:	yes
+00:29:38	A0199205Y Jonathan Khoo Teng Yang:	ya
+00:29:47	A0199205Y Jonathan Khoo Teng Yang:	ya
+00:31:48	Philemon Heng:	4
+00:43:50	Philemon Heng:	is there a max # of rotations for balancing?
+00:49:37	Philemon Heng:	is this like some sort of traversal?
+00:50:15	Philemon Heng:	So it has to go to the deepest nodes?
+00:50:41	Philemon Heng:	okay thanks!
+00:56:15	Philemon Heng:	Wait, isn’t std::set a hashtable and a bst?
+01:07:10	Philemon Heng:	are there situations where you would rotate a tree not for balancing?
+01:07:13	A0217218J Sean den Hartog:	I don't remember asking anything 0.0
+01:10:52	A0217218J Sean den Hartog:	Wira didn't you do this yesterday? I see ya on te scoreboard
+01:25:59	Philemon Heng:	was it case 9 rte?
+01:28:13	A0217218J Sean den Hartog:	thank you~
+01:28:17	A Akil Ahamed:	okay thank u
+01:28:20	Philemon Heng:	okay thanks!
+01:28:30	Philemon Heng:	does this q even use bst?
+01:28:45	Philemon Heng:	ah okay, thanks!
+01:30:18	A0204990A Noor Sarrah Bte Mohamed Rafi:	thank you

@@ -1,0 +1,111 @@
+#include <iostream>
+#include <stack>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int xMoves[] = { 2, 1, -1, -2, -2, -1, 1, 2 };
+int yMoves[] = { 1, 2, 2, 1, -1, -2, -2, -1 };
+
+
+bool valid(int x, int y, int N){
+	if (x < 0 or x >= N or y < 0 or y >= N){
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+
+vector<pair<int,int>> nextmove(int x, int y, int N){
+	vector<pair<int,int>> temp;
+	for (int i = 0; i < 8; i++){
+		if (valid(x+xMoves[i],y+yMoves[i],N)){
+			temp.push_back(make_pair(x+xMoves[i],y+yMoves[i])); 
+		}
+	}
+	return temp;
+}
+
+int main(){
+	int N; cin >> N;
+	char temp;
+	pair<int,int> vis[N][N];
+	pair <int, int> start; pair <int, int> pos;
+	for (int i = 0; i < N; i++){
+		for (int j = 0; j < N; j++){
+			cin >> temp;
+			if (temp == 'K'){
+				start = make_pair(i,j);
+				vis[i][j].first = 1;
+				vis[i][j].second = 0;
+			}
+			else if (temp == '#'){
+				vis[i][j].first = 1;
+				vis[i][j].second = 100;
+			}
+			else{
+				vis[i][j].first = 0;
+				vis[i][j].second = 100;
+			}
+		}
+	}
+	
+	stack <pair<int,int>> now;
+	vector<pair<int,int>> temp2;
+	int moves = 0;
+	now.push(start);
+	bool found = false;
+	while (now.empty() == false){
+		pair<int,int> look = now.top();
+/*		cout << look.first << " " << look.second << endl;*/
+		moves = vis[look.first][look.second].second;
+		now.pop();
+		if(look.first == 0 and look.second == 0){
+			vis[0][0].first = 2;
+			found = true;
+		}
+		vis[look.first][look.second].first = 3;
+		temp2 = nextmove(look.first, look.second, N);
+		for (auto &i: temp2){
+			if (vis[i.first][i.second].first == 3 and vis[i.first][i.second].second > moves+1){
+				now.push(i);
+				vis[i.first][i.second].second = moves + 1;
+			}
+			else if (vis[i.first][i.second].first != 1 and vis[i.first][i.second].first != 3){
+				now.push(i);
+				if (vis[i.first][i.second].second >= moves+1){
+					vis[i.first][i.second].second = moves + 1;
+				}
+			}
+		}
+		
+	}
+	
+	if (!found){
+		cout << -1 << endl;
+	}
+	else{
+		cout << vis[0][0].second << endl;
+	}
+	
+/*
+	cout << "--------------" << endl;
+	for (int i = 0; i < N; i++){
+		for (int j = 0; j < N; j++){
+			cout << vis[i][j].first;
+		}
+		cout << endl;
+	}
+	
+	cout << "--------------" << endl;
+	for (int i = 0; i < N; i++){
+		for (int j = 0; j < N; j++){
+			cout << vis[i][j].second << " ";
+		}
+		cout << endl;
+	}*/
+	
+	
+	return 0;
+}

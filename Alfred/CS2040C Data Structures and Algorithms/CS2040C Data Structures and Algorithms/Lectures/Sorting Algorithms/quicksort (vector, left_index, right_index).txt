@@ -1,0 +1,32 @@
+void quicksort(vector<int> vect, int left_index, int right_index)
+{
+    // Base case: No need to sort arrays of length <= 1
+    if (left_index >= right_index) {
+        return;
+    }
+    // Choose pivot to be the last element in the subarray
+    int pivot = vect[right_index];
+
+    // Index indicating the "split" between elements smaller than pivot and elements greater than pivot
+    int centre_index = left_index;
+
+    // Traverse through array from left to right
+    for (int i = left_index; i <= right_index; i++) {
+        // If an element less than or equal to the pivot is found...
+        if (vect[i] <= pivot) {
+            // Then swap vect[centre_index] and vect[i] so that the smaller element vect[i] 
+            // is to the left of all elements greater than pivot
+            int temp = vect[i];
+            vect[i] = vect[centre_index];
+            vect[centre_index] = temp;
+
+            // Make sure to increment centre_index so we can keep track of what to swap
+            // vect[i] with
+            centre_index++;
+        }
+    }
+    // NOTE: centre_index is currently at one plus the pivot's index 
+    // (Hence, the centre_index-2 when recursively sorting the left side of pivot)
+    quicksort(vect, left_index, centre_index-2); // Recursively sort the left side of pivot
+    quicksort(vect, centre_index, right_index);   // Recursively sort the right side of pivot
+}

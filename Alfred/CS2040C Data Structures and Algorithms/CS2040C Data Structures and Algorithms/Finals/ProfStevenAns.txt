@@ -1,0 +1,170 @@
+###CS2040C FINAL AY2021S1###
+
+###INLINE ANSWERS###
+
+#Student Num: Dr Steven Halim
+#NUSNET ID: dcssh
+#Q0: dcssh
+
+#Q1a: will always be at index n-2 for n >= 2 (trivia (not part of the marking scheme): which can be index 0 too if n == 2)
+#Q1b: the hardest indices to access either from head or from tail/from backwards are:
+index n/2 if n is odd, index n/2-1 and n/2 if n is even (minus 2 if forgot to mention the other case)
+saying tail (or second last) is the hardest to access is wrong (1 point only) as the DLL has both head and tail pointers.
+
+#Q2a: index [2..7]. index 2 or 3 because the 3rd largest can be in 2nd level below root.
+or index 4/5/6/7 because the 3rd largest can be in the 3rd level below root (beaten by root and an intermediate parent)
+deduct 2 points per missing index (most likely missing index 2?)
+#Q2b: index [7..14], notice that n = 14, so n the last (4th level), we don't have index 15
+index 7 (parent of 14) can be the location of 2nd smallest
+but 4/5/6 cannot (as they have two children, so if the 2 smallest are children of 4/5/6, they will be 3rd smallest at best)
+deduct 2 points per missing index (most likely missing my favorite index 7 :O)
+
+###END OF INLINE ANSWERS###
+
+###MULTILINE ANSWERS###
+
+##Q3a START##
+[Line limit : 3]
+SLL with head pointer only, push(new-v) is insert to head,
+top is report head, pop is delete head, all O(1)
+deduct 1 point for slightly wrong copy paste from (VA) lecture note (PS: using vector back side also full marks)
+##Q3a END##
+
+##Q3b START##
+[Line limit : 3]
+SLL with both head and tail pointers, enqueue(new-v) is insert to tail,
+front is report head, dequeue() is delete head, all O(1)
+deduct 1 point for slightly wrong copy paste from (VA) lecture note (PS: using DLL or deque for queue is overkill, but we plan not to deduct any marks for going this route)
+##Q3b END##
+
+##Q3c START##
+[Line limit : 4]
+Binary Heap (maybe index [1..n], get_max() is report root (index 1), 
+enqueue(new-v) is insert to index n+1 (then ++n) and shift up in O(log n),
+extract_max() is replace root 1 with index n, --n, and shift down O(log n)
+deduct 1 point for slightly wrong copy paste from (VA) lecture note (PS: using BALANCED BST for this maybe deduct -1 if cannot answer how to do get_max() in O(1) - possible if we keep current max at all times in our modified balanced BST)
+##Q3c END##
+
+##Q3d START##
+[Line limit : 4]
+keys unordered, so use Hash Table, Separate Chaining Collission Resolution technique with table size ~n (and prime).
+insert(new-v) use hash function h(new-v) = k, go through k'th list to avoid duplicate, append if unique
+is_exist(v) use hash function h(v) = k, go through k and search for it
+remove(v) search first (is_exist variant) and remove if found
+deduct 1 point for slightly wrong copy paste from (VA) lecture note (or cannot handle duplicate, or not mentioning Hash Table size setup correctly... slow if M is too small)
+##Q3d END##
+
+##Q3e START##
+[Line limit : 5]
+we use std::map<int, string> L, map index [0..n-1] to string..., very overkill
+get(i) is return L[i], that's O(log n)
+insert(i, new-v) is shift index [i..n-1] to [i+1..n] in O(n log n) and set L[i] = new-v in O(log n)
+search(v) is to loop through index [i..n-1] to see if the value is v (the key is index, not the value :O), O(n log n)
+remove(i) is shift index [i+1..n-1] to [i..n-2], that's O(n log n)
+##Q3e END##
+
+##Q3f START##
+[Line limit : 5]
+We use std::map<int, int> s, and a counter (arrivalTime), very inefficient
+there are at most 1 Billion push and pop operations so int won't overflow
+push(new-v): we insert s[arrivalTime] = new-v in O(log n), then ++arrivalTime 
+top(): we report *s.rbegin()->second, O(log n)
+pop(): we report top() and then erase max element (the one with highest arrivalTime), O(log n)
+##Q3f END##
+
+##Q3g START##
+[Line limit : 5]
+We use std::unordered_map<int, queue<int>> PQ, basically key = [0..100] (101 keys, Direct Addressing)
+enqueue(new-v) is to enqueue new-v at PQ[new-v]
+get_max() is to iterate from key 100 down to 0 and report the head of first non-empty queue (or none if all are empty)
+extract_max() is to iterate from key 100 down to 0 and dequeue from first non-empty queue (or do nothing if all are empty)
+the unordered_map is not necessary as DAT (101 queues) is sufficient
+##Q3g END##
+
+##Q4 START##
+[Line limit : 10]
+The constraints are simplified (only 10 years, or at most 3650+2 days at most), so we don't need a true O(1) formula (it is possible, think about it)
+A simple way is to advance DD1/MM1/YYYY1 to first Sunday, e.g., if it is a Tuesday/1, add+5 days to Sunday/6
+Then, add 7 days, everytime we hit limit of days of month (check leap year), increase month by one,
+everytime we hit limit of month, increase year by one
+if we hit DD2/MM2/YYYY2, we stop
+the time complexity is at most 3652 steps, we can call this O(1) if we want to...
+
+
+draft marking scheme: anything that works? deduct 1/2 marks for any small bugs encountered
+##Q4 END##
+
+##Q5a START##
+[Line limit : 9]
+AM             AL
+ abcde                              
+a02001         a: [(b,2), (e,1)]
+b00000         b: []
+c00031         c: [(d,3), (e,1)]
+d00000         d: []
+e10010         e: [(a,1), (d,1)]
+
+EL = [(a,b,2), (a,e,1), (c,d,3), (c,e,1), (e,a,1), (e,d,1)]
+##Q5a END##
+
+##Q5b START##
+[Line limit : 5]
+the vertex weights can be simply stored in a vector of V elements,
+retrieving edge weight can thus be done in O(1).
+in such special (star) graph, there is only one central vertex, we can just remember this central vertex
+edge(u, v) exists if and only if either u or v is the central vertex, doesn't exist otherwise, O(1)
+
+##Q5b END##
+
+##Q6 START##
+[Line limit : 9]
+3 points... well... don't use Bubble/Insertion/Selection Sort lah
+6 points solution: sort the WHOLE thing, first by length, second by alphabetical, and print first K... this is O((N log N) * M)...
+10 points solution: bucket/hash :O N strings into 20 vectors of length 1/2/.../20, we sort length 1 first and print first K (if need length 2, we process accordingly), this will make O((N/20 log N/20) * M/2) on average, 20-30x faster probably
+15 points solution: use partial_sort :D, build min heap in O(N * M) then do O((K log N) * M), K is only up to 100, so 100 * log N should be much faster compared to 100[[K]] * log N, about 1000x faster
+
+
+##Q6 END##
+
+##Q7a START##
+[Line limit : 3]
+Just report abs(R1-R2)+abs(C1-C2)+1..., O(1), This is PE /universityzoning all over again
+(if forgot to answer +1 of Manhattan distance, deduct 1 point)
+as there  is no obstruction, the path can be simply (R1,C1) to (R2,C1) -- sync the rows, then to (R2,C2) -- sync the columns
+##Q7a END##
+
+##Q7b START##
+[Line limit : 5]
+Implicit 2D grid graph, BFS from (R1,C1), going to 4 N/E/S/W neighbors,
+skip cells outside the grid or re-visited cells, (note that the weight is on vertices, not on edges :O, like Q5b)
+stop and report unweighted SSSP distance to (R2,C2)+1, use BFS spanning tree to show the path
+runs in O(RxC), visits all cells and up to 4 neighbors once
+(if forgot to answer +1 of BFS distance, also deduct 1 point as Q7a, error carry forward)
+##Q7b END##
+
+##Q7c START##
+[Line limit : 7]
+Same as Q7b, but instead of using queue, we use deque
+we put 1 weighted neighbor at the back (+1 cost if taken), but put 0 weighted neighbor at front of queue (+0 cost if taken)
+thus we prioritize exploring the 0-es first
+stop and report 0/1-weighted SSSP distance to (R2,C2)+1 if (R1,C1) is a 1 :O (the source), and report SSSP spanning tree 
+time complexity remains O(RxC)
+(if forgot to answer +1 if (R1,C1) is a 1, also deduct 1 point as Q7a, error carry forward)
+actual marking scheme to be decided after seeing a few sample answers
+##Q7c END##
+
+##Q7d START##
+[Line limit : 9]
+Same as Q7b modeling, but instead of using priority queue :O, or deque with 2 states (0/1)
+we use 7*R*C queues (Q3f technique), and prioritizing lower total queue first.
+this can still be treated as O(7*RxC)
+details of this Dijkstra's with special PQ variant
+can be read here: http://users.eecs.northwestern.edu/~dda902/336/hw5-sol.pdf, question 1
+of course, most students will say standard Dijkstra's here, O(R*C log R*C) and print the SSSP spanning tree
+log(R*C) when R*C > 2^7 (128) will be worse than 7, so for large grid of 1000x1000, 7RC solution is "faster"
+actual marking scheme to be decided after seeing a few sample answers
+##Q7d END##
+
+###END OF MULTILINE ANSWERS###
+
+###END OF CS2040C FINAL ###

@@ -1,0 +1,49 @@
+###CS2040C MIDTERM EXAM AY2021S1###
+Mock midterms pdf pw: A+ACAP5.0*^_^*
+
+###INLINE ANSWERS###
+
+#Student Num:
+#NUSNET ID:
+#Q0:
+
+
+#Q1a:
+#Q1b:
+#Q1c:
+#Q1d:
+
+#Q2a:
+#Q2b:
+#Q2c:
+
+#Q3a:
+#Q3b:
+#Q3c:
+
+#Q4:
+
+###END OF INLINE ANSWERS###
+
+
+###MULTILINE ANSWERS###
+
+##Q5a START##
+[Line limit : 24]
+replace this with your answer for Q5a
+replace this with your answer for Q5a
+replace this with your answer for Q5a
+##Q5a END##
+
+
+##Q5b START##
+[Line limit : 40]
+replace this with your answer for Q5b
+replace this with your answer for Q5b
+replace this with your answer for Q5b
+##Q5b END##
+
+###END OF MULTILINE ANSWERS###
+
+
+###END OF CS2040C MIDTERM EXAM###

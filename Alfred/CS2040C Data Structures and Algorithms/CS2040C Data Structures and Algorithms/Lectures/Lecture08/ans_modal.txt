@@ -1,0 +1,60 @@
+###CS2040C MIDTERM QUIZ AY2021S1###
+
+###INLINE ANSWERS###
+
+#Student Num: Dr Steven Halim
+#NUSNET ID: dcssh
+#Q0: dcssh
+
+#Q1a: 1024, find the pattern, 128*8 = 1024 (not 128*7 = 896 - partial mark: 1/3), don't simulate blindly
+#Q1b: heretoo, case without break (fall through) has been shown in class (/thegrandadventure explanation)
+#Q1c: 3.4000000, setprecision has been shown in class (/pervasiveheartmonitor explanation)
+#Q1d: 0024CCShiisst, // number < ALPHA < alpha (this is a standard Bubble Sort implementation)
+#Q1e: 7, there are 1 abcd each and 3 es, so f will be the 8th character (index 7)
+
+#Q2a: n log n
+#Q2b: 1
+#Q2c: n
+#Q2d: m^2
+#Q2e: l log l again, O(l log l) sort + O(log l) binary search = O(l log l) overall
+
+#Q3a: 1, only the sorted permutation {1,2,3,4,5,6,7} will not trigger 2nd pass (easy)
+#Q3b: 720 (6!, hard to spot), basically all 6! of {2,3,4,5,6,7}, with {1} always at the back (to trigger the 6th pass)
+#Q3c: Yes, it is correct, but I will not use it as doing so makes the time complexity: O(d * n log n)/slower, I might as well just sort the entire integers in just O(n log n)
+#Q3d: Merge sort fits the description. However it is not the most frequently used sorting algorithm because it's most common implementation is not in-place and has high hidden constant factor.
+
+#Q4a: Not possible; to do O(N) 'Contains Duplicate' check in place, you will need to have list L to be sorted first; It is not guaranteed, so we will need at least O(N log N) to first sort L (maybe with modified randomized Quick Sort for Linked List; note that merge sort is by default not in place)
+#Q4b: It will remain correct, but there will be severe memory leaks as deleted vertices are never 'garbage-collected'/released/deleted from memory.
+#Q4c: std::deque D (just use push_back/pop_back for push/pop operations, dropping everything else); fixed-size array A has that fixed-size problem; binary heap H can be turned into a stack if we want (max PQ, every time we enqueue, we insert key with increasing value, so that the latter items will be at the top, LIFO, but O(log N) each time)
+#Q4d: fixed size array A (of size C) is the best :), https://visualgo.net/en/list?slide=5-3 (circular queue), the "1 metre" apart is just distraction (not important for this question), deque takes more memory than fixed size array albeit all operations remains O(1) - so 2nd best, we can turn a priority queue (binary heap) into a queue again but slows down queue operations to O(log N)
+#Q4e: Just use two normal queues, but with pair, the 2nd field is for the arrival counter (incremented +1 every time a new value is enqueued): queue<pair<string, int>> qs; and queue<pair<string, int>> qi; enqueue strings/integers to qs/qi, respectively. dequeueString/dequeueInteger works on qs/qi, respectively. front will now compare the front of either qs or qi and report the one with lower arrival counter. This way, all operations are O(1).
+
+#Q5a: [-1, 5, 4, 1, 2, 3], [-1, 5, 4, 2, 1, 3], or [-1, 5, 4, 3, 1, 2] (I think only 3 different valid answers; a few didn't put -1 at index 0)
+#Q5b: Remove(v) (in O(log n), this custom operation already defined). If Remove(v) reports NULL, stop :O (-1 if this is forgotten). But if Remove(v) doesn't report NULL, we (re-)insert new value: Insert(v+delta_v) (also in O(log n)). This is one of the possible solution of PS3B, so use this idea to help you complete PS3B if you haven't done so :).
+
+###END OF INLINE ANSWERS###
+
+###MULTILINE ANSWERS###
+
+##Q6a START##
+[Line limit : 15]
+Note: O(d(N+k)) Radix/ O(N) Counting sort are wrong: ARBITRARY precision!, d can be VERY big
+
+O(N^2), just run any "slow" comparison-based sorting algorithm, e.g., bubble sort (unoptimized)
+O(N log N), just run any "fast" comparison-based sorting algorithm, e.g., merge sort or just std::sort
+O(NK) brute force, find min in each of subarray of size K and print (or simply call Insertion sort or OPTIMIZED bubble sort, either of these won't do more than O(NK) here)
+O(N log K), O(N) pass, use O(log K) min PQ to extract min and then insert the next value (very few will be able to reach this stage)
+##Q6a END##
+
+##Q7a START##
+[Line limit : 25]
+Note: SORTING the students sitting a circle is WRONG as it destroys the original sequence
+
+O(NK) brute force, try all possible K
+O(N log K), O(N) pass, use O(log K) min PQ with delete any (to delete item that is K indices old from min PQ)
+O(N), sliding window with deque, CP4 Section 9.2, variant no 4 (very few will be able to reach this stage)
+##Q7a END##
+
+###END OF MULTILINE ANSWERS###
+
+###END OF CS2040C MIDTERM QUIZ###

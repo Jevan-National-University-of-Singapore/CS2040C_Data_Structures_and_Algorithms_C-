@@ -1,0 +1,27 @@
+00:16:55	Jonathan:	have a flag such that if there are no relaxations, stop the process
+00:16:58	A0199205Y Jonathan Khoo Teng Yang:	Boolean flag
+00:17:49	A0199205Y Jonathan Khoo Teng Yang:	bfs ah
+00:20:09	[PC] A0199360W A Akil Ahamed:	set or pq
+00:26:05	A0217218J Sean den Hartog:	Itstill works but the pq gets bloated
+00:29:49	A0217218J Sean den Hartog:	check if they share a neighbour
+00:42:14	[PC] A0199360W A Akil Ahamed:	auto [d, u] = *pq.begin();
+00:42:23	[PC] A0199360W A Akil Ahamed:	how do I rewrite this line?
+00:42:48	[PC] A0199360W A Akil Ahamed:	auto d = *pq.begin(); auto u = *pq.begin()
+00:43:15	[PC] A0199360W A Akil Ahamed:	as In the first line is in c++ 17 right
+00:43:23	[PC] A0199360W A Akil Ahamed:	yea
+00:43:38	[PC] A0199360W A Akil Ahamed:	so auto s = *pq.begin
+00:43:47	[PC] A0199360W A Akil Ahamed:	s.first and s.second?
+00:44:12	Wira Azmoon Ahmad:	auto d = pq.begin()->first;
+00:44:27	Wira Azmoon Ahmad:	(*s).something
+00:44:29	Wira Azmoon Ahmad:	s->something
+00:44:37	[PC] A0199360W A Akil Ahamed:	ahh okok
+01:03:17	A0217218J Sean den Hartog:	comparisons = 2h
+01:03:50	A0201600H Zhong Shuhao:	why are there 3 comparisons for node 7?
+01:03:53	A0217218J Sean den Hartog:	2h where h is height of tree below node
+01:04:09	A0217218J Sean den Hartog:	*height of node below current node?
+01:11:58	Philemon Heng:	Wait what does “included for cs2040c online quiz” mean?
+01:12:41	Philemon Heng:	okay
+01:14:41	A0217218J Sean den Hartog:	dijkstra
+01:25:15	Jonathan:	q.insert?
+01:26:27	Jonathan:	whoops, saw wrong
+01:29:15	Jonathan:	i saw wrongly hahaha

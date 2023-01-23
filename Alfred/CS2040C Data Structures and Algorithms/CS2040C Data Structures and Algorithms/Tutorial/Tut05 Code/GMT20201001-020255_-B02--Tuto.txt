@@ -1,0 +1,51 @@
+00:04:49	Tan Gee Teng A0184658M:	I think comparable
+00:04:59	Tan Gee Teng A0184658M:	pastyears quite hard also
+00:05:42	R M Raajamani:	We have it
+00:10:28	Tan Gee Teng A0184658M:	for 2d and 2e if I wrote n^2 and nlogn is that okay?
+00:27:30	A0199642N See H. G. Alfred:	4d we cannot use deque still but put an if condition not to enqueue when the (fixed) size is reached?
+00:27:55	Pang Jun Wen, Adric:	^
+00:33:11	A0199205Y Jonathan Khoo Teng Yang:	wah
+00:33:21	A0199205Y Jonathan Khoo Teng Yang:	means string can be ints also
+00:33:22	A0199205Y Jonathan Khoo Teng Yang:	toh
+00:36:22	Pang Jun Wen, Adric:	im guessing for 5b I lose marks if I never check for NULL?
+00:47:25	[PC] A0199360W A Akil Ahamed:	can
+00:54:46	Jonathan:	cannot find base address
+00:54:54	Sean den Hartog:	hash needs to be repeatable
+00:55:50	Sean den Hartog:	a lot of collisions
+00:57:13	Sean den Hartog:	It takes in the whole string? can be q slow
+00:58:51	A0168765L Philemon Heng:	all integers < 100 grouped together?
+00:58:55	Sean den Hartog:	odd numbers are not getting mapped
+00:58:58	Pang Jun Wen, Adric:	a lot of collisions
+01:00:42	Sean den Hartog:	a lot of collisions
+01:02:12	Jonathan:	non-deterministic hash function
+01:06:16	[PC] A0199360W A Akil Ahamed:	is there way to distinguish between integer and strings? like how we distinguish them in getline?
+01:11:03	Sean den Hartog:	check if first digit is '-' or isDigit. iterate through the resto of the string to check if they are also digit
+01:11:16	[PC] A0199360W A Akil Ahamed:	ahhh okay
+01:11:26	[PC] A0199360W A Akil Ahamed:	thank u
+01:19:23	[PC] A0199360W A Akil Ahamed:	for finding player ID in shiritori, how do i complete this line? (i%2 == 0) ? 1 : (i%2 == 1) ? 2 :
+01:20:24	[PC] A0199360W A Akil Ahamed:	oh ya 
+01:20:25	[PC] A0199360W A Akil Ahamed:	hahaha
+01:20:30	Sean den Hartog:	#define even(i) !(i&1)
+01:20:49	[PC] A0199360W A Akil Ahamed:	whats this?
+01:20:58	Sean den Hartog:	it's an even method
+01:21:22	Sean den Hartog:	so if you & a number w/ 1, even numbers would get 0 and odd numbers would get 1
+01:22:06	Sean den Hartog:	let's say 7 is 0111 in bit notation so 0111&0001 = 1
+01:22:36	Sean den Hartog:	8 is 1000 so 1000&0001 = 0
+01:22:52	Sean den Hartog:	then you just get the inverse using '!' operator
+01:23:37	[PC] A0199360W A Akil Ahamed:	oh wow thanks
+01:24:09	[PC] A0199360W A Akil Ahamed:	is finals set by steven halim also?
+01:25:13	Sean den Hartog:	Also 0 is treated as bool 'false' and all other values are treated as bool 'true'
+01:25:14	[PC] A0199360W A Akil Ahamed:	then im going to skip the last 2 qns. they probably gonna create a qn where they want us to use all the stuff we learn in 2040c in 1 qn
+01:26:19	A0199642N See H. G. Alfred:	but no time for last few qns.. :/
+01:28:30	[PC] A0199360W A Akil Ahamed:	yeap
+01:33:33	[PC] A0199360W A Akil Ahamed:	whats b^= true?
+01:33:55	Wira Azmoon Ahmad:	1 -> 0
+01:34:26	Wira Azmoon Ahmad:	1 ^ 1 = 01 ^ 0 = 10 ^ 1 = 10 ^ 0 = 0
+01:35:07	[PC] A0199360W A Akil Ahamed:	ok thx
+01:41:37	A0168765L Philemon Heng:	Sorry could you walk through your code?
+01:41:52	A0168765L Philemon Heng:	ctrl +?
+01:42:01	Sean den Hartog:	is it hold ctrl + scroll in?
+01:45:15	A0168765L Philemon Heng:	How is set different from a vector/array?
+01:46:10	A0168765L Philemon Heng:	ah okay thanks
+01:46:29	Sean den Hartog:	Cheers, thanks for tdy~
+01:47:16	[PC] A0199360W A Akil Ahamed:	yes

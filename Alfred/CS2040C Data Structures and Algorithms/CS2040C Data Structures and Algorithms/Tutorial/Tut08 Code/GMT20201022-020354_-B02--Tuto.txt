@@ -1,0 +1,42 @@
+00:10:18	A0217218J Sean den Hartog:	Can't you make verify edge logE using a vector of sets?
+00:10:46	A0217218J Sean den Hartog:	yeapp
+00:30:45	A0199205Y Jonathan Khoo Teng Yang:	no
+00:30:47	A0184658M Tan Gee Teng:	no :(
+00:30:52	A0199205Y Jonathan Khoo Teng Yang:	I noob
+00:30:55	A0184658M Tan Gee Teng:	impossible?
+00:32:23	Philemon Heng:	v-1
+00:32:23	Philemon Heng:	v
+00:32:26	A0199205Y Jonathan Khoo Teng Yang:	v*v-1/2
+00:32:35	A0199205Y Jonathan Khoo Teng Yang:	(v)(v-2)/2
+00:32:39	A0199205Y Jonathan Khoo Teng Yang:	v-1*
+00:44:03	A0217218J Sean den Hartog:	cyclic
+00:44:13	A0217218J Sean den Hartog:	1->33->1
+00:48:12	A0217218J Sean den Hartog:	Is there a problem where DFS is more optimal than BFS?
+00:48:33	A0217218J Sean den Hartog:	hmm. Because everything DFS can do, BFS can also do
+00:49:07	A0217218J Sean den Hartog:	Ahh. Alrighty, thank you
+00:49:23	A0217218J Sean den Hartog:	Though I could do that w/ BFS too? If stepsTaken>depth?
+00:50:08	A0217218J Sean den Hartog:	So like a qn is 'Does depth 7 exist?'
+00:50:22	A0217218J Sean den Hartog:	then DFS would be more optimal. yeapp
+00:50:25	A Akil Ahamed:	is it faster if I bfs from the end and the source at the same time and I meet at the middle?
+00:51:56	A0217218J Sean den Hartog:	it's a DFS?
+00:55:20	A0217218J Sean den Hartog:	Is not too bad a qn
+00:56:25	A0199205Y Jonathan Khoo Teng Yang:	wheres the link for this qns
+00:56:34	A0199205Y Jonathan Khoo Teng Yang:	ya
+00:56:40	A0199205Y Jonathan Khoo Teng Yang:	cant find on worldofseven
+00:56:40	Wira Azmoon Ahmad:	https://nus.kattis.com/problems/onaveragetheyrepurple
+00:56:42	A0199205Y Jonathan Khoo Teng Yang:	thx
+00:56:53	Philemon Heng:	sorry what was the kattis for today?
+00:57:00	Philemon Heng:	Oooh okay thanks
+00:57:24	Jonathan:	nope it's fine 
+00:58:04	A0184658M Tan Gee Teng:	hi wira, can u explain why the DAG all edge should point away from new vertex agn?
+01:00:14	A0184658M Tan Gee Teng:	because I think if all point into new vertex works as well, as long as u keep it consistent
+01:00:40	A0184658M Tan Gee Teng:	oh nice thanks!
+01:17:24	A0217218J Sean den Hartog:	I don't think you need a visited vector?
+01:17:30	A0217218J Sean den Hartog:	You can just check if depth = 0
+01:17:52	A0217218J Sean den Hartog:	if depth[node] ==0 (node has not been visited)
+01:24:17	A0199205Y Jonathan Khoo Teng Yang:	can attach the code file to ur email?
+01:24:37	A Akil Ahamed:	yeap
+01:24:40	A0199205Y Jonathan Khoo Teng Yang:	ye, but can attach urs too?
+01:24:42	A0199205Y Jonathan Khoo Teng Yang:	")
+01:24:49	A0199205Y Jonathan Khoo Teng Yang:	thx
+01:26:48	A Akil Ahamed:	ok thank u

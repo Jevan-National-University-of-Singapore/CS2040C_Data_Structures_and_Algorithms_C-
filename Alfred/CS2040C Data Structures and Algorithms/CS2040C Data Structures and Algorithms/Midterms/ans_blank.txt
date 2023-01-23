@@ -1,0 +1,55 @@
+###CS2040C MIDTERM QUIZ AY2021S1###
+
+###INLINE ANSWERS###
+
+#Student Num:
+#NUSNET ID:
+#Q0:
+
+#Q1a:
+#Q1b:
+#Q1c:
+#Q1d:
+#Q1e:
+
+#Q2a:
+#Q2b:
+#Q2c:
+#Q2d:
+#Q2e:
+
+#Q3a:
+#Q3b:
+#Q3c:
+#Q3d:
+
+#Q4a:
+#Q4b:
+#Q4c:
+#Q4d:
+#Q4e:
+
+#Q5a:
+#Q5b:
+
+###END OF INLINE ANSWERS###
+
+###MULTILINE ANSWERS###
+
+##Q6a START##
+[Line limit : 15]
+replace this with your answer for Q6a
+replace this with your answer for Q6a
+replace this with your answer for Q6a
+##Q6a END##
+
+##Q7a START##
+[Line limit : 25]
+replace this with your answer for Q7a
+replace this with your answer for Q7a
+replace this with your answer for Q7a
+##Q7a END##
+
+###END OF MULTILINE ANSWERS###
+
+###END OF CS2040C MIDTERM QUIZ###

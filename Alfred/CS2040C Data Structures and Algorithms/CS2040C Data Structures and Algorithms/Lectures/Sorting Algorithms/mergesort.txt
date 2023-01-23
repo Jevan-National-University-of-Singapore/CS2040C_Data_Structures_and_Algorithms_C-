@@ -1,0 +1,38 @@
+void merge(vector <int> vect, int left, int mid, int right) {
+  int N = right - left + 1;
+  vector <int> V_temp;
+  int l = left; int r = mid+1;
+
+  while (l <= mid && r <= right) {
+  	if (vect[l] <= vect[r]){
+  		V_temp.push_back(vect[l]);
+  		l++;
+  	}
+  	else{
+  		V_temp.push_back(vect[r]);
+  		r++;
+  	}
+  }
+  while (l <= mid) {
+  	V_temp.push_back(vect[l]);
+  	l++;
+  }
+  while (r <= right){
+  	V_temp.push_back(vect[r]);
+  	r++;
+  }
+  vect = V_temp; V_temp.clear();
+  /*vect.erase(vect.begin(),vect.end());
+  for (int i = 0; i < N; i++) {
+  	vect.push_back(V_temp[i]);
+  }*/
+}
+
+void mergeSort(vector <int> vect, int left, int right){
+	if (left < right){
+		int mid = (left + right)/2;
+	mergeSort(vect, left, mid);
+	mergeSort(vect, mid+1, right);
+	merge(vect, left, mid, right);
+	}
+}

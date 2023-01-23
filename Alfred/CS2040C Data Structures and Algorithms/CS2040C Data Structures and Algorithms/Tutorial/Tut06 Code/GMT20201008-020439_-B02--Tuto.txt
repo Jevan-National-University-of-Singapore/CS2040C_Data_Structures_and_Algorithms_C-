@@ -1,0 +1,25 @@
+00:14:17	A0199205Y Jonathan Khoo Teng Yang:	Previous slide mentioned "checking" of every position?
+00:14:39	A0199205Y Jonathan Khoo Teng Yang:	ISnt quadratic just traversing along to the calculated position? EG. 18th position
+00:15:08	A0217218J Sean den Hartog:	no need to traverse, just jump to index cuz it's a vector right?
+00:15:39	A0199205Y Jonathan Khoo Teng Yang:	Ok
+00:17:22	Philemon Heng:	Will it mess up the initial hash function?
+00:17:24	A0199205Y Jonathan Khoo Teng Yang:	cos it terminates if empty
+00:20:10	A0217218J Sean den Hartog:	what's the advantage of linear probling over the LL implementation?
+00:20:26	A0217218J Sean den Hartog:	or any kind of probing
+00:21:15	A0217218J Sean den Hartog:	Ooh. alright
+00:34:34	A0199205Y Jonathan Khoo Teng Yang:	Sorry, I know I might be able to find this ans on google, but I saw earlier in the closed addressing, u declared a "vector"
+00:34:38	A0199205Y Jonathan Khoo Teng Yang:	can I declare as list
+00:36:58	A0199205Y Jonathan Khoo Teng Yang:	i got qns
+00:36:59	A0199205Y Jonathan Khoo Teng Yang:	^
+00:38:08	A0199205Y Jonathan Khoo Teng Yang:	significant complexity difference between those?
+00:38:16	A0199205Y Jonathan Khoo Teng Yang:	If i were to use a vect or if i were to use a list?
+00:38:35	A0199205Y Jonathan Khoo Teng Yang:	ok thx
+00:38:53	A0199205Y Jonathan Khoo Teng Yang:	but if have to go thru all, is list more efficient?
+00:39:17	A0199205Y Jonathan Khoo Teng Yang:	aight
+00:41:38	A Akil Ahamed:	1+2+4+8+16+32+1?
+00:45:02	Jonathan:	Wira
+00:45:14	Jonathan:	can you explain the question on the path
+00:45:21	Jonathan:	Question 4 I think?
+00:46:11	Philemon Heng:	Depends on how he counts levels?
+00:47:50	Jonathan:	oh... thanks wira
+01:25:42	Wira Azmoon Ahmad:	C<=2^50

@@ -1,0 +1,183 @@
+###CS2040C FINAL AY2021S1###
+
+###INLINE ANSWERS###
+
+#Student Num:
+#NUSNET ID:
+#Q0: A0199642N
+
+#Q1a:n-2
+#Q1b:n/2 if n is odd, n/2 and (n/2)-1 if n is even
+
+#Q2a:2,3,4,5,6,7
+#Q2b:8,9,10,11,12,13,14,7
+
+###END OF INLINE ANSWERS###
+
+###MULTILINE ANSWERS###
+
+##Q3a START##
+[Line limit : 3]
+A deque, as a double-ended queue is able to insert, remove and access elements in O(1) at both ends of the deque.
+In this case for a stack, only one end of the deque will be used. (A queue can only insert and remove at opposite ends)
+
+##Q3a END##
+
+##Q3b START##
+[Line limit : 3]
+A double linked list is able to insert and delete element at the head/tail in O(1)
+and get(i) in O(1) only for the head and tail nodes.
+
+
+##Q3b END##
+
+##Q3c START##
+[Line limit : 4]
+A binary max heap can be used where top() will get the max element in O(1),
+and pop() will remove the topmost (maximum) element insert and push() wil insert a new element in the heap
+both in O(log n) due to the bubbling up/down the tree to sort the max heap after the insertion/deletion.
+
+
+##Q3c END##
+
+##Q3d START##
+[Line limit : 4]
+Use an array of array to insert remove and get based on the index[i][j] in O(1) time
+
+
+
+##Q3d END##
+
+##Q3e START##
+[Line limit : 5]
+
+
+
+
+
+##Q3e END##
+
+##Q3f START##
+[Line limit : 5]
+
+
+
+
+
+##Q3f END##
+
+##Q3g START##
+[Line limit : 5]
+unordered_set / unordered_map
+
+
+
+
+##Q3g END##
+
+##Q4 START##
+[Line limit : 10]
+Record Initial_daytype [If monday record 1, if tues record 2, etc.]
+Total days = (YYY2 - YYY1)*365
+for i in YYY1 to YYY2:
+	if isLeapYear == true: total days +=1
+for i in range MM1 to MM2:
+	if i = 2: Monthdays += 28, if i = (1 or 3 or 5 or 7 or 8 or 10 or 12): Monthdays += 31, else: Monthdays += 30
+if MM2-MM1 < 0: Total days -= Monthdays, else: Total days += Monthdays //less than a full year passed
+if DD2-DD1 < 0: Total days -= |DD1-DD2|, else: Total days += |DD1-DD2|
+Record wanted_Day_type [If monday record 1, if tues record 2, etc.]
+Daytype_count = ( (|wanted_Day_type - Initital_daytype|%7) + Total days ) % 7
+
+
+
+
+
+
+
+
+
+##Q4 END##
+
+##Q5a START##
+[Line limit : 9]
+AM                  AL
+ abcde                              
+a02001              a: [{b,2},{e,1}        ]
+b00000              b: [                   ]
+c00031              c: [{d,3},{e,1}        ]
+d00000              d: [                   ]
+e10010              e: [{a,1},{d,1}        ]
+
+EL = [{a,b,2},{a,e,1},{c,d,3},{c,e,1},{e,a,1},{e,d,1}                                                                 ]
+##Q5a END##
+
+##Q5b START##
+[Line limit : 5]
+
+
+
+
+
+##Q5b END##
+
+##Q6 START##
+[Line limit : 9]
+create vector V to store output, create vector U to temp store sorted array
+create 27 buckets (26 for alphabets + 1 for 'space'(i use zeros to fill this up)
+for (j=19; j>=0; j--):// 20 digits
+	for str i in Array: if i.size() < 20: pre-concatenate '0's to the string to form string of size 20.
+		place str in the respective bucket corresponding to str[j]
+		if str[j] == '0': remove from bucket and push_back to output vector V.
+			if V.size() == K: cout all elements in V, and terminate the radix sort.
+	for x in range (27) /* buckets */: move back the contents (in the order it was inserted) to vector U.
+Time complexity: O(w(N+k)), where w is number of digits (20) and k is number of buckets (27).
+
+##Q6 END##
+
+##Q7a START##
+[Line limit : 3]
+Level of pain = (|R2-R1|+1) + (|C2-C1|+1) //no obstructions, unweighted problem
+Path is just 2 straight lines from R1 to R2 then C1 to C2.
+Time complexity is O(1)
+
+##Q7a END##
+
+##Q7b START##
+[Line limit : 5]
+Initialise an RxC grid filled with zeros. Mark each obstruction with '#'. Step = 0
+Use BFS from cell R1C1, traversing only in the horizontal and vertical directions.
+Step++; If neighbour is not obstruction or is within grid, add step to neighbour if not visited before or neighbour previously has more steps. 
+Stop BFS once arrived at cell R2C2. Resulting step value will be the shortest path.
+Time complexity is O(K+V+4) = O(K+V), where K is the number of obstructions and V is max(R,C).
+
+##Q7b END##
+
+##Q7c START##
+[Line limit : 7]
+Similar to Q7b, use a BFS to traverse through path, but step will increase depending on the vertex weight (0 or 1)
+Time complexity is O(K+V+4) = O(K+V), where K is the number of obstructions and V is max(R,C).
+
+
+
+
+
+
+##Q7c END##
+
+##Q7d START##
+[Line limit : 9]
+Use Dijkstra Algorithm.
+Time Complexity is O((V+E)logV)
+
+
+
+
+
+
+
+
+##Q7d END##
+
+###END OF MULTILINE ANSWERS###
+
+###END OF CS2040C FINAL ###

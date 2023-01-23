@@ -1,0 +1,69 @@
+###CS2040C MIDTERM QUIZ AY2021S1###
+
+###INLINE ANSWERS###
+
+#Student Num:
+#NUSNET ID:
+#Q0:E0406623
+
+#Q1a:1024
+#Q1b:"\n"
+#Q1c:3.4000000
+#Q1d:"0024CCShiisst"
+#Q1e:6
+
+#Q2a:nlog(n)
+#Q2b:1
+#Q2c:n
+#Q2d:n^2
+#Q2e:nlog(n)
+
+#Q3a:43[1 (All alrdy sorted) + 7 integers x 6 out of sort positions (All but 1 integer must be already sorted)]
+#Q3b:1 [All 7 integers must be in reverse order]
+#Q3c:Yes, algorithmically correct. Wont use because it requires many temporary arrays to be created for merge sort implimented into the radix sort.
+#Q3d:merge sort. No, merge sort requires additional space complexity as it uses an external array. Randomised quick sort is frequently used as well.
+
+#Q4a:Cannot, as the SLL is not sorted, duplicates may not appear consecutively, thus need to store value of the integer in another data structure to check if we have encountered it before as we iterate down the SLL.
+#Q4b:The implementation will still work, but del (the deleted element) is takes up memory in the computer with no way to access it.
+#Q4c:D
+#Q4d:D, same as Q4c to allow enqueue and dequeue without n shifting of elements. Just put if condition to not join D when its length reaches C. 
+#Q4e:Yes, can create multiple queues (1 for strings and 1 for integers), enqueue and dequeue specific type to the corresponding queue, note which is last enqueued for front().
+
+#Q5a:{-1,4,2,3,1}
+#Q5b:
+
+###END OF INLINE ANSWERS###
+
+###MULTILINE ANSWERS###
+
+##Q6a START##
+[Line limit : 15]
+[N] = array;
+for (i=0; i<N; i++){
+	for (j=0; j<N-i; j++){
+		if (array[i] > array[i+1]){
+			swap(array[i],array[i+1]);
+		}
+	}
+}
+return array; // O(N^2)
+##Q6a END##
+
+##Q7a START##
+[Line limit : 25]
+vector<int> A; int N; int K; int total = 0; int best = 0;
+for (i=0; i<N-K; i++){
+	for (j=0; j<K; j++){
+		total += A[i];
+	}
+	if (total > best){
+		best = total;
+	}
+	total = 0;
+}
+return best; // O(NK)
+##Q7a END##
+
+###END OF MULTILINE ANSWERS###
+
+###END OF CS2040C MIDTERM QUIZ###
